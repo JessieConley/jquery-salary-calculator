@@ -94,7 +94,7 @@ function addEmployee(){
     function addRed(){
         console.log('in addRed');
         if (totalMonthlySalary > 20000) {
-          $("#mSalary").addClass(".red");
+          $("#mSalary").addClass("red");
         }
     } //end addRed function
     
