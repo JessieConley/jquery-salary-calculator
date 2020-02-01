@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="stylesheet.css"></script>
+    <script src="jquery-3.4.1.min.js"></script>
     <script src="script.js"></script>
     <link rel="stylesheet" href="stylesheet.css">
     <title>Weekend Challenge</title>
@@ -26,48 +26,23 @@
             <input type="number" placeholder="annual salary" id="employeeAnnualSalary">
         </form>
         <button id="submit">Submit</button>
-        <h3>Employees</h3>
-        <table style width="width:100%">
-        <tr>
-            <th>First Name:</th>
-            <th>Last Name:</th>
-            <th>ID Number:</th>
-            <th>Job Title:</th>
-            <th>Annual Salary:</th>
-            <th>placeholder</th>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        </table>
+  
 </body>
+
+<table>
+    <thead>
+        <tr>
+        <th>employee first name</th>
+        <th>employee last name</th>
+        <th>ID Number</th>
+        <th>job title</th>
+        <th>annual salary</th>
+        </tr>
+    </thead>
+    <tbody id="employeesOut">
+
+    </tbody>
+</table>
+
+<p>Monthly Total Salary: $<span id = "monthly salary"></p>
 </html>
