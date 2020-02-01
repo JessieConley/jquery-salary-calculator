@@ -2,7 +2,7 @@ console.log('js');
 $(document).ready(onReady);
 
 let employeeInfo = [];
-let totalSalary = 0;
+let totalMonthlySalary = 0;
 //inputs collect employee first name, last name, ID number, job title, annual salary_.
 
 //A 'Submit' button should collect the form information, store the information to calculate monthly costs, append information to the DOM and clear the input fields. 
@@ -15,7 +15,7 @@ let totalSalary = 0;
 function onReady() {
   //console.log("in readyNow");
   //handle submit button click event
-  $('#submit').on('click', addEmployee);
+  $("#submit").on("click", addEmployee);
 }
 
 
@@ -29,7 +29,8 @@ function addEmployee(){
       id: $("#employeeIDNumber").val(),
       title:$("#employeeJobTitle").val(),
       salary:$("#employeeAnnualSalary").val()
-    }
+    } //end object array
+
     //push employee info into array
     employeeInfo.push(employee);
     //empty inputs
@@ -38,6 +39,33 @@ function addEmployee(){
     $("#employeeIDNumber").val('');
     $("#employeeJobTitle").val('');
     $("#employeeAnnualSalary").val('');
+
+    //invoke displayEmployees function
+    displayEmployees();
+
+} //end add Employee
+
+    //create function to display employees added:
+
+    function displayEmployees(){
+        console.log("in displayEmployees");
+        //target outputs by id
+        let el = $("#employeesOut");
+        el.empty();
+        // loop through employeeInfo array
+        for (let i=0; i<employeeInfo.length; i++){
+            //append employee info to table in DOM
+            el.append(`
+            <tr>
+            <td>${employeeInfo[i].firstName}</td>
+            <td>${employeeInfo[i].lastName}</td>
+            <td>${employeeInfo[i].id}</td>
+            <td>${employeeInfo[i].title}</td>
+            <td>${employeeInfo[i].salary}</td>
+            </tr>`);
+        } //end for loop
+        
+    } //end displayEmployees function
 
     //calculate total salary:
 
@@ -58,5 +86,5 @@ function addEmployee(){
 
 
     } // end monthlySalary
-}
+
 
