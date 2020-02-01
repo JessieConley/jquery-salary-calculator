@@ -66,6 +66,7 @@ function addEmployee(){
             <td>${employeeInfo[i].id}</td>
             <td>${employeeInfo[i].title}</td>
             <td>${employeeInfo[i].salary}</td>
+            <td><button class="deleteButton">Delete</button></td>
             </tr>`);
         } //end for loop
 
