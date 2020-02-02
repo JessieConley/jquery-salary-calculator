@@ -5,17 +5,13 @@ let employeeInfo = [];
 let totalMonthlySalary = 0;
 
 
-//A 'Submit' button should collect the form information, store the information to calculate monthly costs, append information to the DOM and clear the input fields. 
-//Using the stored information, calculate monthly costs and append this to the to DOM. If the total monthly cost exceeds $20,000, add a red background color to the total monthly cost.
-
-//Create a delete button that removes an employee from the DOM. For Base mode, it does **not** need to remove that Employee's salary from the reported total.
-
-//decalre array variable to store input values entered in the DOM:
 
 function onReady() {
   //console.log("in readyNow");
   //handle submit button click event
   $("#submit").on("click", addEmployee);
+  $("#employeesOut").on('click', 'button', removeEmployee);
+  
   
 }
 
@@ -98,6 +94,13 @@ function addEmployee(){
           $("#mSalary").addClass("red");
         }
     } //end addRed function
+
+    function removeEmployee(){
+        let buttonElement = $(this);
+        let tdElement = buttonElement.parent();
+        let trElement = tdElement.parent();
+        trElement.remove();
+    }
     
 
 

@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="stylesheet.css">
     <title>Weekend Challenge</title>
 </head>
-<h1>Salary Calculator</h1>
-</head>
+<header>
+    <div class="header">
+    <h1>Salary Calculator</h1>
+    </div>
+</header>
 
-
-<!-- The application should have an input form that collects: -->
-<!--  _employee first name, last name, ID number, job title, annual salary_. -->
 <body>
     
         <h2>Add Employee: <span id="employeeOut"></span></h2>
@@ -24,12 +24,13 @@
             <input type="number" placeholder="ID Number" id="employeeIDNumber">
             <input type="text" placeholder="job title" id="employeeJobTitle">
             <input type="number" placeholder="annual salary" id="employeeAnnualSalary">
-        
+    
         <button id="submit">Submit</button>
-  
+    
 </body>
 
 <table>
+    <table border= '1'>
     <thead>
         <tr>
         <th>Employee First Name</th>
@@ -40,11 +41,15 @@
         <th></th>
         </tr>
     </thead>
+
     <tbody id="employeesOut">
         
 
     </tbody>
+    
 </table>
 
+<div class="monthlySalary">
 <p>Total Monthly Salary: $<span id = "mSalary"></p>
+    </div>
 </html>
