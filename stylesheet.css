@@ -12,34 +12,23 @@ body{
   width:100%;
   padding-top: 70px;
   padding-bottom: 10px; 
-  padding-left: 30px; 
-  position: absolute;
   font-family: sans-serif;
-  left: 20px;
+  margin: 0;
+  background-color: mistyrose;
+  }
+ 
   
-  }
-  #employeeFirstName{
+  input{
       border-color: black;
       padding: 5px;
+      font-size: medium;
+      margin-left: 1.5%;
   }
+  
+.employeeH2{
+    margin-left: 1.5%;
+}
 
-  #employeeLastName{
-      border-color: black;
-      padding: 5px;
-  }
-#employeeIDNumber{
-      border-color: black;
-      padding: 5px;
-  }
-  #employeeJobTitle{
-      border-color: black;
-      padding: 5px;
-  }
-
-  #employeeAnnualSalary{
-      border-color: black;
-      padding: 5px;
-  }
 
 table {
     border: 1px solid black;
@@ -55,6 +44,10 @@ tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
+tr:nth-child(odd) {
+    background-color: white;
+}
+
 .red{
     background-color: red;
 }
@@ -62,11 +55,13 @@ tr:nth-child(even) {
 .monthlySalary{
     padding-left: 20px;
     padding-top: 20px;
-    text-align: justify;
+    
 }
 
 button{
     border-color: black
+    padding: 5px;
+    font-size: medium;
 }
 
 th{
