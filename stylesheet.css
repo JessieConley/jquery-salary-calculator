@@ -60,8 +60,18 @@ tr:nth-child(odd) {
 
 button{
     border-color: black
+    font-size: 
+
+}
+
+.submit{
     padding: 5px;
     font-size: medium;
+    padding: 5px 15px;
+    width: 15%;
+    border-color: black;
+    background-color: paleturquoise;
+    font-weight: bold;
 }
 
 th{

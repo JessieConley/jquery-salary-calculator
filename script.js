@@ -11,7 +11,7 @@ let totalMonthlySalary = 0;
 function onReady() {
   console.log("in readyNow");
   //handle submit button click events
-  $("#submit").on("click", addEmployee);
+  $(".submit").on("click", addEmployee);
   $("#employeesOut").on('click', 'button', removeEmployee);
   
   
