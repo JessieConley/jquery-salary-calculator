@@ -1,14 +1,16 @@
 console.log('js');
 $(document).ready(onReady);
 
+//declare empty array variable to push employee info to:
 let employeeInfo = [];
+//declare variable to use in calculating monthly salary:
 let totalMonthlySalary = 0;
 
 
 
 function onReady() {
-  //console.log("in readyNow");
-  //handle submit button click event
+  console.log("in readyNow");
+  //handle submit button click events
   $("#submit").on("click", addEmployee);
   $("#employeesOut").on('click', 'button', removeEmployee);
   
@@ -41,6 +43,7 @@ function addEmployee(){
     displayEmployees();
     //invoke monthly salary function
     monthlySalary();
+    //invoke addRed function
     addRed();
    
 } //end add Employee
@@ -66,11 +69,12 @@ function addEmployee(){
             </tr>`);
         } //end for loop
 
+        //invoke monthlySalary function
         monthlySalary();
         
     } //end displayEmployees function
 
-    //calculate total salary:
+    //Create funtion to calculate total salary:
 
     function monthlySalary(){
         console.log('in monthlySalary');
@@ -88,6 +92,7 @@ function addEmployee(){
 
     } // end monthlySalary
 
+    //Create function to add red for monthly salary over $20K
     function addRed(){
         console.log('in addRed');
         if (totalMonthlySalary > 20000) {
@@ -95,12 +100,13 @@ function addEmployee(){
         }
     } //end addRed function
 
+    //Create funtion to remove employee upon click of delete button
     function removeEmployee(){
         let buttonElement = $(this);
         let tdElement = buttonElement.parent();
         let trElement = tdElement.parent();
         trElement.remove();
-    }
+    } //end removeEmployee function
     
 
 
